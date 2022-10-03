@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:OsmanAlisarIdesse.ViewModels" xmlns:converters="clr-namespace:OsmanAlisarIdesse.Converters" xmlns:behaviors="clr-namespace:OsmanAlisarIdesse.Behaviors"
+             x:Class="OsmanAlisarIdesse.Views.MainPage">
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ItemAppearingEventArgConverter x:Key="ItemAppearingEventArgConverter"/>
+            <converters:TextChangedEventArgsConverter x:Key="TextChangedEventArgsConverter"/>
+ 
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content >
+        <StackLayout Orientation="Vertical" >
+            <SearchBar Placeholder="İsim giriniz..." >
+                <SearchBar.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="TextChanged"  EventArgsConverter="{StaticResource TextChangedEventArgsConverter}" Command="{Binding TextChange}"/>
+                </SearchBar.Behaviors>
+            </SearchBar>
+            <ListView RowHeight="80" ItemsSource="{Binding  Source={x:Static viewModels:MainPageViewModel.PersonList}}"  >
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior  EventName="ItemAppearing" EventArgsConverter="{StaticResource ItemAppearingEventArgConverter}" Command="{Binding ItemAppearing}"/>
+                </ListView.Behaviors>
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout  Orientation="Horizontal" HeightRequest="200" >
+                                <Image  HeightRequest="50" Source="emptyCircle.png" ></Image>
+                                <StackLayout Orientation="Vertical" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label  TextColor="Black" Text="{Binding CardTitleCode}"></Label>
+                                        <Label  TextColor="Black" Text="{Binding CardName}"></Label>
+                                        <Label  TextColor="Blue" Text="{Binding CardProfessionCode}"></Label>
+                                    </StackLayout>
+                                    <Label  Text="{Binding LocationName}"></Label>
+                                    <Label Text="Detay"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

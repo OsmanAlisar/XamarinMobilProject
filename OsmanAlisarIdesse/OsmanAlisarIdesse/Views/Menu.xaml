@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:OsmanAlisarIdesse.ViewModels"
+             x:Class="OsmanAlisarIdesse.Views.Menu">
+    <ContentPage.BindingContext>
+        <viewModels:UserViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+        <StackLayout Margin="0,30,0,15">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="personImg50x50.png"></Image>
+               
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Mehraba"></Label>
+                    <Label Text="{Binding LoginUser.FullName}"></Label>
+                    <Label Text="{Binding LoginUser.PositionDescription}"></Label>
+                </StackLayout>
+            
+            </StackLayout>
+
+            <Button Command="{Binding RegisterMenu} " ImageSource="addPersonImg30x30.png" Margin="0,50,0,0" Text="Kişi Ekle"></Button>
+  
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

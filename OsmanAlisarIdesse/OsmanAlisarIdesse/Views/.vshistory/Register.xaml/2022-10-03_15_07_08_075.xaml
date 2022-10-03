@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:OsmanAlisarIdesse.ViewModels"
+             x:Class="OsmanAlisarIdesse.Views.Register">
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="İsim Giriniz:"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Text="{Binding Name}"></Entry>
+            <Label   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Text="Soyisim Giriniz:" ></Label>
+            <Entry Text="{Binding SurName}"></Entry>
+            <Button Command="{Binding Path=BindingContext.Register,Source={x:Reference Register}}"  Text="Kayıt"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OsmanAlisarIdesse.Views.Menu">
+    <ContentPage.Content>
+        <StackLayout Margin="0,30,0,15">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="personImg50x50.png"></Image>
+               
+                <StackLayout Orientation="Vertical">
+                    <Label Text=" Adı Soyadı"></Label>
+                    <Label Text="İş Yerş"></Label>
+                </StackLayout>
+            
+            </StackLayout>
+
+            <Button ImageSource="personList30x30" BackgroundColor="Transparent" Text="Menu 1"></Button>
+            <Button Text="Menu 1"></Button>
+            <Button Text="Menu 1"></Button>
+            <Button Text="Menu 1"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

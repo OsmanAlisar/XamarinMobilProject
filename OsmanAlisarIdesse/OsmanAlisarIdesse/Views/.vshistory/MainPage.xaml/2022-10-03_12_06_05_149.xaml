@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:OsmanAlisarIdesse.ViewModels"
+             x:Class="OsmanAlisarIdesse.Views.MainPage">
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
+        <StackLayout Orientation="Vertical" >
+            <Label Text="Yeni gelen text"></Label>
+            <ListView RowHeight="80" ItemsSource="{Binding personList}" ItemAppearing="ListView_ItemAppearing"  >
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout  Orientation="Horizontal" HeightRequest="200" >
+                                <Image  HeightRequest="50" Source="emptyCircle.png" ></Image>
+                                <StackLayout Orientation="Vertical" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label  TextColor="Black" Text="{Binding CardTitleCode}"></Label>
+                                        <Label  TextColor="Black" Text="{Binding CardName}"></Label>
+                                        <Label  TextColor="Blue" Text="{Binding CardProfessionCode}"></Label>
+                                    </StackLayout>
+
+                                    <Label  Text="{Binding LocationName}"></Label>
+                                    <Label Text="Detay"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

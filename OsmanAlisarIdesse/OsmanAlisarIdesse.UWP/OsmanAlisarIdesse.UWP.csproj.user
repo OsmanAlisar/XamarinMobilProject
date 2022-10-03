@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</Source>
+    <SmallTileSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</SmallTileSource>
+    <MediumTileSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</MediumTileSource>
+    <WideTileSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</WideTileSource>
+    <LargeTileSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</LargeTileSource>
+    <AppIconSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</AppIconSource>
+    <SplashScreenSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</SplashScreenSource>
+    <PackageLogoSource>D:\Projects\OsmanAlisarIdesse\OsmanAlisarIdesse.UWP\IdessePng.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
